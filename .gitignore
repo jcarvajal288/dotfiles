@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Don't ignore specific files
+!.gitignore
+!.vimrc
+!.zshrc
+!.i3/
+!.i3/config
