@@ -54,6 +54,8 @@ set cm=blowfish
 autocmd BufReadPost * if &key != "" | set noswapfile nowritebackup viminfo= nobackup noshelltemp history=0 secure | endif 
 
 au BufNewFile,BufRead *.gradle setf groovy
+au BufNewFile,BufRead *.g set filetype=antlr3
+au BufNewFile,BufRead *.g4 set filetype=antlr4
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 
 "map <F2> o{<CR>}<Esc>O
@@ -71,7 +73,7 @@ if has("autocmd")
   filetype indent on
 endif
 
-"set undodir=/usr/share/vim/undodir
-"set undofile
-"set undolevels=1000 "maximum number of changes that can be undone
-"set undoreload=10000 "maximum number of lines to save for undo on buffer reload
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number of lines to save for undo on buffer reload

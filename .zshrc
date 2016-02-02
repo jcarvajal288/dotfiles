@@ -1,8 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export CLASSPATH=".:/usr/local/lib/antlr-4.5.2-complete.jar:$CLASSPATH"
+alias antlr4='java -jar /usr/local/lib/antlr-4.5.2-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'
 
-export TERM="screen-256color"
+export TERM="xterm-256color"
+export EDITOR="vim"
 alias tmux="tmux -2"
+source ~/bin/tmuxinator.zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,7 +16,7 @@ alias tmux="tmux -2"
 ZSH_THEME="candy"
 
 # Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
